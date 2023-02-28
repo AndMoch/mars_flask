@@ -137,5 +137,47 @@ def results(nickname, level, rating):
                   </html>"""
 
 
+@app.route("/carousel")
+def carousel():
+    return f"""<!doctype html>
+                      <html lang="en">
+                        <head>
+                          <meta charset="utf-8">
+                          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                          <link rel="stylesheet" 
+                          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
+                          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
+                          crossorigin="anonymous">
+                          <title>Пейзажи Марса</title>
+                        </head>
+                        <body>
+                          <h1>Пейзажи Марса</h1>
+                          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                              <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active">
+                                  <img class="d-block w-100" src="{url_for('.static', filename='img/1.jpg')}">
+                                </div>
+                                <div class="carousel-item">
+                                  <img class="d-block w-100" src="{url_for('.static', filename='img/2.jpg')}">
+                                </div>
+                                <div class="carousel-item">
+                                  <img class="d-block w-100" src="{url_for('.static', filename='img/3.jpg')}">
+                                </div>
+                              </div>
+                              <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                                data-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="sr-only"></span>
+                              </a>
+                              <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                                 data-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="sr-only"></span>
+                              </a>
+                          </div>
+                        </body>
+                      </html>"""
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1', debug=True)
