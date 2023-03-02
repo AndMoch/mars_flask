@@ -1,4 +1,4 @@
-from flask import Flask, url_for, request
+from flask import Flask, url_for, render_template
 
 app = Flask(__name__)
 
@@ -8,9 +8,19 @@ def main():
     return "Миссия Колонизация Марса"
 
 
+@app.route('/<title>')
+def main_custom_title(title):
+    return render_template(".templates/base.html", title=title)
+
+
 @app.route('/index')
 def tagline():
     return "И на Марсе будут яблони цвести!"
+
+
+@app.route('/index/<title>')
+def index_custom_title(title):
+    return render_template(".templates/base.html", title=title)
 
 
 @app.route('/promotion')
