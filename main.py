@@ -10,7 +10,7 @@ def main():
 
 @app.route('/<title>')
 def main_custom_title(title):
-    return render_template(".templates/base.html", title=title)
+    return render_template("base.html", title=title)
 
 
 @app.route('/index')
@@ -20,7 +20,7 @@ def tagline():
 
 @app.route('/index/<title>')
 def index_custom_title(title):
-    return render_template(".templates/base.html", title=title)
+    return render_template("base.html", title=title)
 
 
 @app.route('/promotion')
