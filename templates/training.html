@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>Тренировки в полёте</title>
+    </head>
+    <body>
+        <h1>Миссия Колонизация Марса</h1>
+        <h4>И на марсе будут яблони цвести!</h4>
+        {% if "инженер" in prof or "строитель" in prof %}
+            <h2>Инженерные тренажеры</h2>
+            <img src="{{url_for('.static', filename='/img/ing.png')}}">
+        {% else %}
+            <h2>Научные Симуляторы</h2>
+            <img src="{{url_for('.static', filename='/img/sci.png')}}">
+        {% endif %}
+    </body>
+</html>

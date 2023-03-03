@@ -1,6 +1,6 @@
 from flask import Flask, url_for, render_template
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="static", static_url_path="/static")
 
 
 @app.route('/')
@@ -187,6 +187,11 @@ def carousel():
                           </div>
                         </body>
                       </html>"""
+
+
+@app.route("/training/<prof>")
+def training(prof):
+    return render_template("training.html", prof=prof)
 
 
 if __name__ == '__main__':
