@@ -155,38 +155,38 @@ def carousel():
                           <meta charset="utf-8">
                           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
                           <link rel="stylesheet" 
-                          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
-                          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
-                          crossorigin="anonymous">
+                            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
+                            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
+                            crossorigin="anonymous">
                           <title>Пейзажи Марса</title>
                         </head>
                         <body>
                           <h1>Пейзажи Марса</h1>
-                          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                              <div class="carousel-inner" role="listbox">
+                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                              <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                  <img class="d-block w-100" src="{url_for('.static', filename='img/1.jpg')}">
+                                  <img class="d-block w-100" src="{url_for('.static', filename='img/1.jpg')}" alt="First slide">
                                 </div>
                                 <div class="carousel-item">
-                                  <img class="d-block w-100" src="{url_for('.static', filename='img/2.jpg')}">
+                                  <img class="d-block w-100" src="{url_for('.static', filename='img/2.jpg')}" alt="Second slide">
                                 </div>
                                 <div class="carousel-item">
-                                  <img class="d-block w-100" src="{url_for('.static', filename='img/3.jpg')}">
+                                  <img class="d-block w-100" src="{url_for('.static', filename='img/3.jpg')}" alt="Third slide">
                                 </div>
                               </div>
-                              <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
-                                data-slide="prev">
-                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                  <span class="sr-only"></span>
+                              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only"></span>
                               </a>
-                              <a class="carousel-control-next" href="#carouselExampleControls" role="button"
-                                 data-slide="next">
-                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                  <span class="sr-only"></span>
+                              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only"></span>
                               </a>
-                          </div>
-                        </body>
-                      </html>"""
+                            </div>
+                            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+                    </body>
+                  </html>"""
 
 
 @app.route("/training/<prof>")
