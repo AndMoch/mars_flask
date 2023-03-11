@@ -225,5 +225,11 @@ def auto_answer():
     return render_template("auto_answer.html", **param)
 
 
+@app.route("/distribution")
+def distribution():
+    members = ['Ридли Скотт', 'Энди Уир', 'Марк Уотни', 'Венката Капур', 'Тэдди Сандерс', 'Шон Бин']
+    return render_template("on_the_board.html", members=members)
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1', debug=True)
